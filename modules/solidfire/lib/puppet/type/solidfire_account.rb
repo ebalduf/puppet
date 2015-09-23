@@ -1,4 +1,7 @@
-Puppet::Type.newtype(:solidfire) do
+Puppet::Type.newtype(:solidfire_account) do
+  @doc = "Manage Accounts on solidfire cluster"
+
+  ensurable
 
   newparam(:name, :namevar => true) do
   end
@@ -10,14 +13,6 @@ Puppet::Type.newtype(:solidfire) do
   end
 
   newparam(:passwd) do
-  end
-
-  newparam(:account) do
-  end
-
-  ensurable
-
-  newproperty(:size) do
   end
 
 end
